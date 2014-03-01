@@ -1,0 +1,63 @@
+<table class="table table-bordered table-striped" style="clear: both">
+    <tbody>
+    <tr>
+        <td width="35%">Name</td>
+        <td width="65%"><input class="input-large" id="Name" name="Name" type="text"
+                               ng-model="farmer.Name"
+                               required></td>
+    </tr>
+
+    <tr>
+        <td width="35%">Village</td>
+        <td width="65%"><input class="input-large" id="Village" name="Village" type="text"
+                               ng-model="farmer.Village"
+                               required></td>
+    </tr>
+    <tr>
+        <td width="35%">Phone number</td>
+        <td width="65%"><input class="input-large" id="Phone" name="Phone" type="text"
+                               ng-model="farmer.Phone"
+                               required></td>
+    </tr>
+    <tr>
+        <td width="35%">Location</td>
+        <td width="65%"><input class="input-large" id="Location" name="Location" type="text"
+                               ng-model="farmer.Location"
+                               required></td>
+    </tr>
+    <tr>
+        <td width="35%">Profile Pic</td>
+        <td width="65%"><input class="input-large" id="Profile_Pic" name="Profile_Pic" type="text"
+                               ng-model="farmer.Profile_Pic"
+                               required></td>
+    </tr>
+    <!--<tr>-->
+        <!--<td width="35%">Assistant Name</td>-->
+        <!--<td width="65%"></td>-->
+    <!--</tr>-->
+    <tr>
+        <td width="35%">Crop Details</td>
+
+        <td width="65%">
+            <ul ng-repeat="crop in farmer.Crop">
+                <li>Crop: {{crop.Crop_Type }}</li>
+                <li>Sowing Date: {{crop.Crop_Sowing_Date}}</li>
+                <li>Land: {{crop.Land}}</li>
+                <br/>
+            </ul><button ng-click="save()">Click to add Crop</button></td>
+    </tr>
+    <tr>
+        <td width="35%">Advice</td>
+        <td width="65%">
+            <ul ng-repeat="advice in farmer.TimeLine">
+            <li>Assistant name: {{ }}</li>
+            <li>Work Type: {{advice.Work_Type}}</li>
+            <li>Description: {{advice.Description}}</li>
+            <li>Field_Image: {{}}</li>
+            <li>Transaction Date:{{advice.Transaction_Date}}</li>
+            <li>Product: {{advice.product}}</li>
+            <br/>
+            </ul><button ng-click="save1()">Click to add Advice</button></td>
+    </tr>
+    </tbody>
+</table>
