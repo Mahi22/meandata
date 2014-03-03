@@ -1,27 +1,39 @@
+<form name="farmerForm" novalidate>
 <table class="table table-bordered table-striped" style="clear: both">
     <tbody>
     <tr>
         <td width="35%">Name</td>
-        <td width="65%"><input class="input-large" id="Name" name="Name" type="text"
-                               ng-model="farmer.Name"
-                               required></td>
+        <td width="65%"><input class="input-large" id="Name" name="Name" type="text" placeholder="Enter Farmer name"
+                               ng-model="farmer.Name" ng-minlength=5
+                               required><span class="errorMessage" ng-show="farmerForm.Name.$dirty && farmerForm.Name.$invalid">
+                                <small ng-show="farmerForm.Name.$error.required">
+                                   Your name is required.</small>
+                                <small ng-show="farmerForm.Name.$error.minlength">
+                                    Your name is required to be at least 5 characters.</small>
+                        </span></td>
     </tr>
 
     <tr>
         <td width="35%">Village</td>
-        <td width="65%"><input class="input-large" id="Village" name="Village" type="text"
-                               ng-model="farmer.Village"
-                               required></td>
+        <td width="65%">
+                               <input type="text" ng-model="farmer.Village" id="Village" name="Village" placeholder="Find Farmer Village/town" typeahead="address for address in getLocation($viewValue) | filter:$viewValue" typeahead-loading="loadingLocations" required>
+                               <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh">
+                                <span class="errorMessage" ng-show="farmerForm.Village.$dirty && farmerForm.Village.$invalid">
+                                    <small ng-show="farmerForm.Village.$error.required">
+                                    Village name is required.</small>
+                                </span></td>
     </tr>
     <tr>
         <td width="35%">Phone number</td>
-        <td width="65%"><input class="input-large" id="Phone" name="Phone" type="text"
+        <td width="65%"><input class="input-large" id="Phone" name="Phone" type="number" placeholder="enter 0 for no number"
                                ng-model="farmer.Phone"
-                               required></td>
+                               required><span class="errorMessage" ng-show="farmerForm.Phone.$dirty && farmerForm.Phone.$invalid">
+                               invalid entry it should number
+                        </span></td>
     </tr>
     <tr>
         <td width="35%">Location</td>
-        <td width="65%"><input class="input-large" id="Location" name="Location" type="text"
+        <td width="65%"><input class="input-large" id="Location" name="Location" type="text" placeholder="copy map URL"
                                ng-model="farmer.Location"
                                required></td>
     </tr>
@@ -61,3 +73,26 @@
     </tr>
     </tbody>
 </table>
+
+
+
+    <div class="row">
+        <div class="span12">
+            <button type="submit" class="btn btn-primary" data-ng-click="saveCustomer()" ng-disabled="farmerForm.$invalid || !farmerForm.$dirty">add {{buttonText}}</button>
+            &nbsp;&nbsp;
+            <button class="btn btn-danger" data-ng-if="customer.id > 0" data-ng-click="deleteCustomer()">Delete</button>
+        </div>
+    </div>
+    <div class="row">
+        <br />
+        <div class="span10 label label-success show-hide-animation" data-ng-show="updateStatus">
+            <i class="icon-thumbs-up icon-white"></i>&nbsp;&nbsp;Customer updated!
+        </div>
+        <div class="span10 label label-important show-hide-animation" data-ng-show="errorMessage">
+            <i class="icon-thumbs-down icon-white"></i>&nbsp;&nbsp;Error: {{ errorMessage }}
+        </div>
+    </div>
+
+
+
+</form>

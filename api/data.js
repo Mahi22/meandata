@@ -56,7 +56,7 @@ exports.create = function(req, res) {
  * Update a client
  */
 exports.update = function(req, res) {
-//    var client = req.client;
+    var client = req.client;
     console.log("Calling from update function " + client);
 
     client = _.extend(client, req.body);

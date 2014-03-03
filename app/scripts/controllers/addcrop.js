@@ -24,4 +24,25 @@ angular.module('angularApp')
         }
 
         $scope.init();
+
+        $scope.today = function() {
+            $scope.crop.Crop_Sowing_Date = new Date();
+        };
+        $scope.today();
+
+
+        $scope.open = function($event) {
+            $event.preventDefault();
+            $event.stopPropagation();
+
+            $scope.opened = true;
+        };
+
+        $scope.dateOptions = {
+            'year-format': "'yy'",
+            'starting-day': 1
+        };
+
+        $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'shortDate'];
+        $scope.format = $scope.formats[0];
   });

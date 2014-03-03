@@ -1,8 +1,23 @@
 'use strict';
 
 angular.module('angularApp')
-  .controller('AddfarmerCtrl', function ($scope, $location, FarmerData,$http) {
+  .controller('AddfarmerCtrl', function ($scope, $location, FarmerData, $http) {
         $scope.farmer = { Name:'',Village:'',Phone:'',Location:'',Profile_Pic:""};
+
+        $scope.getLocation = function(val) {
+            return $http.get('http://maps.googleapis.com/maps/api/geocode/json', {
+                params: {
+                    address: val,
+                    sensor: false
+                }
+            }).then(function(res){
+                    var addresses = [];
+                    angular.forEach(res.data.results, function(item){
+                        addresses.push(item.formatted_address);
+                    });
+                    return addresses;
+                });
+        };
 
         $scope.save = function(){
 
@@ -21,5 +36,5 @@ angular.module('angularApp')
                console.log(farmer);
                $location.path('/addcrop/'+farmer._id);
            });
-        }
+        };
   });
