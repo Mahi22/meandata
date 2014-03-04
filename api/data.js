@@ -39,6 +39,7 @@ exports.client = function(req, res, next, id) {
  */
 exports.create = function(req, res) {
     var client = new Scrum(req.body);
+    console.log("called all function");
 
     client.save(function(err) {
         if (err) {
@@ -95,6 +96,7 @@ exports.show = function(req, res) {
  * List of Clients
  */
 exports.all = function(req, res) {
+    console.log("called all function");
     Scrum.find().exec(function(err, clients) {
         if (err) {
             res.render('error', {

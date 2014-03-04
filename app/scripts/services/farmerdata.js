@@ -7,6 +7,9 @@ angular.module('angularApp')
         }, {
             update: {
                 method: 'PUT'
+            },
+            query:{
+                method:'GET', isArray:true
             }
         });
     });

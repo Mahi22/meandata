@@ -3,6 +3,7 @@
 angular.module('angularApp')
   .controller('AddcropCtrl', function ($scope, $routeParams, $location, FarmerData) {
        $scope.farmer = null;
+       $scope.farmers = [];
        $scope.crop = {Crop_Type:'',Crop_Sowing_Date:'',Land:''};
        $scope.isEdit = false;
 
@@ -20,7 +21,7 @@ angular.module('angularApp')
 
         $scope.init = function (){
            $scope.farmer = FarmerData.get({farmerId: $routeParams.id});
-           console.log($scope.farmer);
+
         }
 
         $scope.init();

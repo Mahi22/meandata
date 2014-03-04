@@ -15,7 +15,9 @@ var FarmerSchema = new Schema({
         Description: String,
         Field_Image: String,
         Transaction_Date: String,
-        Product: String
+        Product: String,
+        Crop: String,
+        Spray_Date: String
     }],
     Crop: [{
         Crop_Type: String,

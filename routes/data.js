@@ -3,7 +3,7 @@ var async = require('async');
 module.exports = function(app) {
     //Client Routes
     var clients = require('../api/data');
-//    app.get('/clients', clients.all);
+    app.get('/farmers', clients.all);
     app.post('/farmers', clients.create);
     app.get('/farmers/:clientId', clients.show);
     app.put('/farmers/:clientId', clients.update);

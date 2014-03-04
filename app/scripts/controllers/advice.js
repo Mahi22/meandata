@@ -8,7 +8,9 @@ angular.module('angularApp')
             Description: '',
             Field_Image: '',
             Transaction_Date: '',
-            Product: ''
+            Product: '',
+            Crop:'',
+            Spray_Date:''
         };
 
         $scope.isEdit = false;
