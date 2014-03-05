@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('angularApp')
-  .controller('AddfarmerCtrl', function ($scope, $location, FarmerData, $http) {
+  .controller('AddfarmerCtrl', function ($scope, $location, FarmerData, $http, Fileupload) {
         $scope.farmer = { Name:'',Village:'',Phone:'',Location:'',Profile_Pic:""};
 
         $scope.getLocation = function(val) {
@@ -19,20 +19,19 @@ angular.module('angularApp')
                 });
         };
 
+        $scope.uploadFile = function(){
+          var files = $scope.profpic;
+          var dirName = ($scope.farmer.Name + $scope.farmer.Village).replace(/ /g,'');
+          var uploadUrl = '/upload/'+ dirName + '/';
+          Fileupload.uploadFilesToUrl(files[0], uploadUrl, function(response) {
+            console.log("File uploaded : "+ response.imgpath);
+            $scope.farmer.Profile_Pic = response.imgpath;
+          });
+        };
+
         $scope.save = function(){
-
-                 // $http.post('/farmers',$scope.farmer)
-                 //     .success(function(data,status,headers,config){
-                 //         window.alert("Success");
-                 //     })
-                 //     .error(function(data,status,headers,config){
-                 //         window.alert(status);
-                 //     });
-
-             var farmer = new FarmerData($scope.farmer);
-
+          var farmer = new FarmerData($scope.farmer);
            farmer.$save(function(){
-
                console.log(farmer);
                $location.path('/addcrop/'+farmer._id);
            });

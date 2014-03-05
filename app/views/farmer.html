@@ -39,9 +39,10 @@
     </tr>
     <tr>
         <td width="35%">Profile Pic</td>
-        <td width="65%"><input class="input-large" id="Profile_Pic" name="Profile_Pic" type="text"
-                               ng-model="farmer.Profile_Pic"
-                               required></td>
+        <td width="65%"><input type="file" file-model="profpic">
+                 <button class="btn btn-primary btn-info" ng-click="uploadFile()">
+                              Upload
+                </button></td>
     </tr>
     <!--<tr>-->
         <!--<td width="35%">Assistant Name</td>-->

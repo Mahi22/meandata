@@ -5,7 +5,9 @@ var mongoose = require('mongoose'),
     async = require('async'),
     Farmer = mongoose.model('Farmer'),
     mongodb=require('mongodb'),
-    _ = require('underscore');
+    _ = require('underscore'),
+    fs = require('fs'),
+    mkdirp = require('mkdirp');
 
 
 /**
@@ -56,6 +58,34 @@ exports.update = function(req, res) {
     });
 };
 
+exports.upload = function(req, res) {
+    var file = req.files.file;
+    var farmername = req.params.name;
+
+        var newpath = uploadPicture(file, farmername);
+        res.jsonp({"imgpath": newpath});
+    
+}
+
+function uploadPicture(file, name) {
+    var pic = file;
+    //create dir with name farmername and village
+    var dirPath = "/uploads/"+name;
+    mkdirp(__dirname + dirPath, function (err) {
+        if (err) console.error(err);
+    });
+    
+
+    var newPath = dirPath +"/" +(Math.floor(Math.random()*10000));
+    fs.readFile(pic.path, function (err, data) {
+        var path = __dirname + newPath;
+      fs.writeFile(path, data, function (err) {
+        console.log(err);
+      });
+
+    });
+    return newPath;
+}
 
 /**
  * Delete an client
