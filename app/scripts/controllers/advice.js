@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('angularApp')
-  .controller('AdviceCtrl', function ($scope, $routeParams, $location, FarmerData) {
+  .controller('AdviceCtrl', function ($scope, $routeParams, $location, $http,FarmerData) {
         $scope.farmer = null;
         $scope.advice = {Assistance_Id : '',
             Work_Type: '',
@@ -12,7 +12,7 @@ angular.module('angularApp')
             Crop:'',
             Spray_Date:''
         };
-
+        $scope.assistants=[];
         $scope.isEdit = false;
 
         $scope.save = function (){
@@ -28,10 +28,18 @@ angular.module('angularApp')
             });
         };
 
-        $scope.init = function (){
+        function init(){
             $scope.farmer = FarmerData.get({farmerId: $routeParams.id});
+
+            $http.get('/assistants').success(function(data,status,headers,config){
+                $scope.assistants=data;
+            })
+            .error(function(data,status,headers,config){
+                console.log('errr');
+            });
+            console.log("sdfsdf"+$scope.assistants);
             console.log($scope.farmer);
         }
 
-        $scope.init();
+        init();
   });

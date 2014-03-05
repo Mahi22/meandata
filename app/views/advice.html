@@ -2,9 +2,9 @@
     <tbody>
     <tr>
         <td width="35%">Assistance Name</td>
-        <td width="65%"><input class="input-large" id="Crop_Type" name="Crop_Type" type="text"
-
-                               required></td>
+        <td width="65%"><select ng-model="advice.Assistance_Id">
+   <option ng-repeat="Assistant in assistants" value="{{Assistant._id}}">{{Assistant.Name}}</option>
+</select></td>
     </tr>
 
     <tr>

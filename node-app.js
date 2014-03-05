@@ -8,9 +8,9 @@ app.use(express.bodyParser());
 app.use(express.static('./app'));
 
 // Bootstrap models
-require('./models/data');
+require('./models/farmer');
 //Bootstrap routes
-require('./routes/data')(app);
+require('./routes/routing')(app);
 
 app.listen(9000);
 console.log('Express server started on port 9000');
