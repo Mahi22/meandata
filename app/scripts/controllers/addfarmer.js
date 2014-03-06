@@ -20,47 +20,54 @@ angular.module('angularApp')
         };
 
         $scope.uploadFile = function(){
+          
           var files = $scope.profpic;
-            if(validate(files[0])) {
+            if(files != undefined && $scope.farmer.Name != '' && $scope.farmer.Village != '' && validate(files[0])) {
             var dirName = ($scope.farmer.Name + $scope.farmer.Village).replace(/ /g,'');
             var uploadUrl = '/upload/'+ dirName + '/';
             Fileupload.uploadFilesToUrl(files[0], uploadUrl, function(response) {
               console.log("File uploaded : "+ response.imgpath);
               $scope.farmer.Profile_Pic = response.imgpath;
             });
+            return true;
            }
+           return false;
         };
 
         $scope.save = function(){
-          var farmer = new FarmerData($scope.farmer);
-           farmer.$save(function(){
-               console.log(farmer);
-               $location.path('/addcrop/'+farmer._id);
-           });
+            
+            if($scope.uploadFile()) {
+              var farmer = new FarmerData($scope.farmer);
+               farmer.$save(function(){
+                   console.log(farmer);
+                   $location.path('/addcrop/'+farmer._id);
+               });
+           }
+           else $scope.errorMessage = "Images not selected.";
         };
 
         function validate(file) {
-        var extensions = new Array("jpg","jpeg","gif","png","bmp");
+          var extensions = new Array("jpg","jpeg","gif","png","bmp");
 
-        var image_file = file.name;
+          var image_file = file.name;
 
-        var image_length = image_file.length;
+          var image_length = image_file.length;
 
-        var pos = image_file.lastIndexOf('.') + 1;
+          var pos = image_file.lastIndexOf('.') + 1;
 
-        var ext = image_file.substring(pos, image_length);
+          var ext = image_file.substring(pos, image_length);
 
-        var final_ext = ext.toLowerCase();
+          var final_ext = ext.toLowerCase();
 
-        for (var i = 0; i < extensions.length; i++)
-        {
-            if(extensions[i] == final_ext)
-            {
-            return true;
-            }
-        }
+          for (var i = 0; i < extensions.length; i++)
+          {
+              if(extensions[i] == final_ext)
+              {
+              return true;
+              }
+          }
 
-        console.log("Allowed image extensions are : "+ extensions.join(', ') +".");
-        return false;
+          console.log("Allowed image extensions are : "+ extensions.join(', ') +".");
+          return false;
         }
   });

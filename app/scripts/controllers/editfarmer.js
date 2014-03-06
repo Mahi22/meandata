@@ -6,7 +6,7 @@ angular.module('angularApp')
 
 
         $scope.save = function(){
-
+            $scope.uploadFile();
             console.log("Called save fuction");
             $scope.farmer.$update(function(data){
                 console.log(data);
@@ -15,7 +15,7 @@ angular.module('angularApp')
         };
 
         $scope.save1 = function(){
-
+            $scope.uploadFile();
             console.log("Called save fuction");
             $scope.farmer.$update(function(data){
                 console.log(data);
@@ -29,16 +29,19 @@ angular.module('angularApp')
 
         $scope.init();
 
-        $scope.uploadFile = function(){
+         $scope.uploadFile = function(){
+          
           var files = $scope.profpic;
-            if(validate(files[0])) {
+            if(files != undefined && $scope.farmer.Name != '' && validate(files[0])) {
             var dirName = ($scope.farmer.Name + $scope.farmer.Village).replace(/ /g,'');
             var uploadUrl = '/upload/'+ dirName + '/';
             Fileupload.uploadFilesToUrl(files[0], uploadUrl, function(response) {
               console.log("File uploaded : "+ response.imgpath);
               $scope.farmer.Profile_Pic = response.imgpath;
             });
+            return true;
            }
+           return false;
         };
 
         function validate(file) {

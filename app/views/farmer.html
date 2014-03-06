@@ -40,9 +40,10 @@
     <tr>
         <td width="35%">Profile Pic</td>
         <td width="65%"><input type="file" file-model="profpic">
-                 <button class="btn btn-primary btn-info" ng-click="uploadFile()">
-                              Upload
-                </button></td>
+        {{ errorMessage }}
+        
+        </td>
+
     </tr>
     <!--<tr>-->
         <!--<td width="35%">Assistant Name</td>-->
@@ -89,7 +90,7 @@
         <div class="span10 label label-success show-hide-animation" data-ng-show="updateStatus">
             <i class="icon-thumbs-up icon-white"></i>&nbsp;&nbsp;Customer updated!
         </div>
-        <div class="span10 label label-important show-hide-animation" data-ng-show="errorMessage">
+        <div class="span10 label label-important" data-ng-model="errorMessage">
             <i class="icon-thumbs-down icon-white"></i>&nbsp;&nbsp;Error: {{ errorMessage }}
         </div>
     </div>
