@@ -4,7 +4,7 @@ angular.module('angularApp')
   .controller('AddfarmerCtrl', function ($scope, $location, FarmerData, $http, Fileupload) {
         $scope.farmer = { Name:'',Village:'',Phone:'',Location:'',Profile_Pic:""};
 
-        $scope.getLocation = function(val) {
+        /*$scope.getLocation = function(val) {
             return $http.get('http://maps.googleapis.com/maps/api/geocode/json', {
                 params: {
                     address: val,
@@ -17,7 +17,7 @@ angular.module('angularApp')
                     });
                     return addresses;
                 });
-        };
+        };*/
 
         $scope.uploadFile = function(){
           
@@ -70,4 +70,18 @@ angular.module('angularApp')
           console.log("Allowed image extensions are : "+ extensions.join(', ') +".");
           return false;
         }
+
+
+        function loadMapsAPI() {
+
+         var options = {
+          types: ['(cities)'],
+          componentRestrictions: {country: "in"}
+         };
+
+         var input = document.getElementById('Village');
+         var autocomplete = new google.maps.places.Autocomplete(input, options);
+        }
+
+        loadMapsAPI();
   });
