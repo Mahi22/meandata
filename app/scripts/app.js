@@ -31,6 +31,10 @@ angular.module('angularApp', [
         templateUrl: 'views/crop.html',
         controller: 'AddcropCtrl'
       })
+      .when('/editcrop/:id/:crop', {
+            templateUrl: 'views/crop.html',
+            controller: 'CropEditCtrl'
+       })
       .when('/advice/:id', {
         templateUrl: 'views/advice.html',
         controller: 'AdviceCtrl'

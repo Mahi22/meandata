@@ -7,11 +7,11 @@
     <file path="/land.html" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1393575558113" ignored="false" />
     <file path="/main.html" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1393845961450" ignored="false" />
     <file path="/main.js" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1393842680263" ignored="false" />
-    <file path="/Dummy.txt" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1393835657152" ignored="false" />
+    <file path="/Dummy.txt" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1394090247777" ignored="false" />
     <file path="/addfarmer.html" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1393577462481" ignored="false" />
     <file path="/addfarmer.js" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1393657923806" ignored="false" />
     <file path="/addcrop.js" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1393841638683" ignored="false" />
-    <file path="/farmer.html" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1393777341232" ignored="false" />
+    <file path="/farmer.html" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1394092715617" ignored="false" />
     <file path="/farmerdata.js" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1393841401665" ignored="false" />
     <file path="$PROJECT_DIR$/../meandata/app/scripts/controllers/client-new.js" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1393584237926" ignored="false" />
     <file path="/client-new.js" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1393584240138" ignored="false" />
@@ -29,10 +29,15 @@
     <file path="/editfarmer.js" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1393665833896" ignored="false" />
     <file path="/advice.html" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1393845836834" ignored="false" />
     <file path="/advice.js" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1393845770586" ignored="false" />
-    <file path="/index.html" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1393843310189" ignored="false" />
+    <file path="/index.html" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1394092443465" ignored="false" />
     <file path="/main.css" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1393749979026" ignored="false" />
     <file path="$PROJECT_DIR$/../meandata/app/scripts/controllers/main.js" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1393841245405" ignored="false" />
     <file path="/farmer.css" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1393843434498" ignored="false" />
+    <file path="/editcrop.js" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1394093221124" ignored="false" />
+    <file path="$PROJECT_DIR$/../meandata/app/scripts/services/notification.js" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1394092297585" ignored="false" />
+    <file path="/notification.js" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1394092260629" ignored="false" />
+    <file path="/client.html" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1394092597630" ignored="false" />
+    <file path="$PROJECT_DIR$/../meandata/app/views/client.html" changelist="e9781249-1d13-4b93-85d5-40130799c5a2" time="1394092599277" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +50,25 @@
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
+  </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="editfarmer.js" pinned="false" current="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/app/scripts/controllers/editfarmer.js">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state line="25" column="44" selection-start="743" selection-end="751" vertical-scroll-proportion="0.67324954">
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -64,45 +88,52 @@
       <file leaf-file-name="addcrop.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/addcrop.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="11" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0">
+            <state line="34" column="8" selection-start="900" selection-end="1275" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="advice.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="advice.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/advice.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="24" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
+            <state line="2" column="26" selection-start="31" selection-end="41" vertical-scroll-proportion="0.057581574">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="advice.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/advice.html">
+      <file leaf-file-name="addfarmer.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/addfarmer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="58" selection-start="1936" selection-end="1936" vertical-scroll-proportion="-20.625">
-              <folding>
-                <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="3" column="72" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="80" selection-start="2046" selection-end="2046" vertical-scroll-proportion="0.85650223">
+            <state line="52" column="80" selection-start="2046" selection-end="2046" vertical-scroll-proportion="-12.583333">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/data.js">
+      <file leaf-file-name="editcrop.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/editcrop.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="20" selection-start="437" selection-end="443" vertical-scroll-proportion="0.0">
+            <state line="38" column="42" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="farmer.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/farmer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -111,38 +142,26 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="6" selection-start="876" selection-end="876" vertical-scroll-proportion="-11.875">
+            <state line="65" column="44" selection-start="3058" selection-end="3058" vertical-scroll-proportion="-11.958333">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="farmer.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/styles/farmer.css">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
+            <state line="35" column="37" selection-start="979" selection-end="979" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="farmerdata.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/services/farmerdata.js">
+      <file leaf-file-name="farmer.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/farmer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="16" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0">
+            <state line="58" column="60" selection-start="3125" selection-end="3125" vertical-scroll-proportion="-11.875">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="crop.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/crop.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="93" selection-start="536" selection-end="536" vertical-scroll-proportion="-7.5">
-              <folding>
-                <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#p#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -157,29 +176,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/land.html" />
-        <option value="$PROJECT_DIR$/app/styles/main.css" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/addfarmer.js" />
         <option value="$PROJECT_DIR$/app/views/crop.html" />
-        <option value="$PROJECT_DIR$/app/views/farmer.html" />
         <option value="$PROJECT_DIR$/routes/data.js" />
         <option value="$PROJECT_DIR$/api/data.js" />
         <option value="$PROJECT_DIR$/app/scripts/services/farmerdata.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/addcrop.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
         <option value="$PROJECT_DIR$/app/styles/farmer.css" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/models/data.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/advice.js" />
         <option value="$PROJECT_DIR$/app/views/advice.html" />
         <option value="$PROJECT_DIR$/app/views/main.html" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/views/farmer.html" />
+        <option value="$PROJECT_DIR$/app/scripts/app.js" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/editcrop.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="386" />
-    <option name="y" value="22" />
-    <option name="width" value="894" />
+    <option name="x" value="2208" />
+    <option name="y" value="90" />
+    <option name="width" value="967" />
     <option name="height" value="705" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -391,8 +410,8 @@
     <property name="options.lastSelected" value="preferences.sourceCode" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -422,13 +441,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="386" y="22" width="894" height="705" extended-state="0" />
+    <frame x="2208" y="90" width="967" height="705" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24924012" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37543055" sideWeight="0.6717949" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23305085" sideWeight="0.6717949" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -504,46 +523,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/land.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="4" selection-start="3532" selection-end="3532" vertical-scroll-proportion="-22.291666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="19" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="4" selection-start="1122" selection-end="1122" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="9" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/addfarmer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="72" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/phonedetail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/services/farmerdata.js">
@@ -555,34 +537,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/crop.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="93" selection-start="536" selection-end="536" vertical-scroll-proportion="-7.5">
-          <folding>
-            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#p#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/addcrop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="11" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/advice.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="24" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
+        <state line="12" column="93" selection-start="536" selection-end="536" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/advice.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="58" selection-start="1936" selection-end="1936" vertical-scroll-proportion="-20.625">
-          <folding>
-            <element signature="n#style#0;n#table#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="59" column="58" selection-start="2690" selection-end="2690" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -593,16 +556,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
+    <entry file="file://$PROJECT_DIR$/app/views/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="6" selection-start="876" selection-end="876" vertical-scroll-proportion="-11.875">
+        <state line="52" column="80" selection-start="2046" selection-end="2046" vertical-scroll-proportion="-12.583333">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/data.js">
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/addfarmer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="20" selection-start="437" selection-end="443" vertical-scroll-proportion="0.0">
+        <state line="3" column="72" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -614,9 +577,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main.html">
+    <entry file="file://$PROJECT_DIR$/models/farmer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="80" selection-start="2046" selection-end="2046" vertical-scroll-proportion="0.85650223">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/farmer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="60" selection-start="3125" selection-end="3125" vertical-scroll-proportion="-11.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="37" selection-start="979" selection-end="979" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="44" selection-start="3058" selection-end="3058" vertical-scroll-proportion="-11.958333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/editfarmer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="44" selection-start="743" selection-end="751" vertical-scroll-proportion="0.67324954">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/addcrop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="8" selection-start="900" selection-end="1275" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/editcrop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="42" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/advice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="26" selection-start="31" selection-end="41" vertical-scroll-proportion="0.057581574">
           <folding />
         </state>
       </provider>

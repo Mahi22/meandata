@@ -56,6 +56,7 @@
                 <li>Crop: {{crop.Crop_Type }}</li>
                 <li>Sowing Date: {{crop.Crop_Sowing_Date}}</li>
                 <li>Land: {{crop.Land}}</li>
+                <li><a href="#/editcrop/{{farmer._id}}/{{crop._id}}">edit<i class="icon-edit"></i></a> <a href="#/delete-project/{{client._id}}/{{project._id}}"><i class="icon-remove"></i></a></li>
                 <br/>
             </ul><button ng-click="save()">Click to add Crop</button></td>
     </tr>
