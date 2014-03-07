@@ -6,15 +6,15 @@ exports.allAssistants=function(req,res){
 	res.json(Assistants);
 }
 
-var Products=[{'_id':'1','Name':'Surf excel'},{'_id':'2','Name':'Tide'}];
+var Products=[];
 
 exports.allProducts=function(req,res){
-	// var arrayOfThings = fs.readFileSync("C:\\Users\\Samphal\\Desktop\\first.txt", "utf8").trim().split(/[\r\n]+/g);
-	// 	for(var i=0;i<arrayOfThings.length;i++)
-	// 	{
-	// 		Product={'_id':i+1,'Name':arrayOfThings[i]};
-	// 		Products.push(Product);
-	// 	}
+	var arrayOfThings = fs.readFileSync("api/Product/Products.txt", "utf8").trim().split(/[\r\n]+/g);
+		for(var i=0;i<arrayOfThings.length;i++)
+		{
+			Product={'_id':i+1,'Name':arrayOfThings[i]};
+			Products.push(Product);
+		}
 	res.json(Products);
 }
 
