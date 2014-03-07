@@ -46,9 +46,14 @@
     </tr>
     <tr>
         <td width="35%">Product</td>
-        <td width="65%"><select ng-model="advice.Product">
-   <option ng-repeat="Product in products" value="{{Product._id}}">{{Product.Name}}</option>
-</select></td>
+        <td width="65%">
+            <button class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
+            <div ng-repeat="item in advice.Product">
+                <select ng-model="advice.Product[$index]">
+                    <option ng-repeat="Product in products" value="{{Product._id}}">{{Product.Name}}</option>
+                </select>
+            </div>
+            </td>
     </tr>
     <tr>
         <td width="35%">Spray Date</td>

@@ -2,7 +2,7 @@ var express = require('express'),
     app = express(),
     mongoose = require('mongoose');
 
-var db = mongoose.connect('mongodb://localhost/ranadeydata');
+var db = mongoose.connect('mongodb://192.168.0.100/test');
 
 app.use(express.bodyParser());
 app.use(express.static('./app'));

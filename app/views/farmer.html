@@ -25,8 +25,8 @@
     </tr>
     <tr>
         <td width="35%">Phone number</td>
-        <td width="65%"><input class="input-large" id="Phone" name="Phone" type="number" placeholder="enter 0 for no number"
-                               ng-model="farmer.Phone"
+        <td width="65%"><input type="number" class="input-large" id="Phone" name="Phone" placeholder="enter 0 for no number"
+                               ng-model="farmer.Phone" ng-minlength=10
                                required><span class="errorMessage" ng-show="farmerForm.Phone.$dirty && farmerForm.Phone.$invalid">
                                invalid entry it should number
                         </span></td>
@@ -63,7 +63,7 @@
         <td width="35%">Advice</td>
         <td width="65%">
             <ul ng-repeat="advice in farmer.TimeLine">
-            <li>Assistant name: {{ }}</li>
+            <li>Assistant name: {{assistants[$index]}}</li>
             <li>Work Type: {{advice.Work_Type}}</li>
             <li>Description: {{advice.Description}}</li>
             <li>Field_Image: {{}}</li>

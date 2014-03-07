@@ -10,6 +10,7 @@ module.exports = function(app) {
     app.put('/farmers/:farmerId', farmers.update);
     app.post('/upload/:name', farmers.upload);
     app.get('/assistants',others.allAssistants);
+    app.get('/assistants/:assId',others.searchById);
     app.get('/products',others.allProducts);
     app.get('/worktypes',others.allWorkType);
 //    app.del('/clients/:clientId', clients.destroy);

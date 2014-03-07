@@ -15,7 +15,7 @@ var mongoose = require('mongoose'),
  */
 exports.client = function(req, res, next, id) {
     Farmer.load(id, function(err, client) {
-        console.log("Calling load function" + client);
+        // console.log("Calling load function" + client);
         if (err) return next(err);
         if (!client) return next(new Error('Failed to load client ' + id));
         req.client = client;
@@ -108,6 +108,8 @@ exports.destroy = function(req, res) {
  * Show an client
  */
 exports.show = function(req, res) {
+    console.log(req.client.TimeLine.length);
+
     res.jsonp(req.client);
 };
 
