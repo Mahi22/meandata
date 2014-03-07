@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9781249-1d13-4b93-85d5-40130799c5a2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/controllers/editcrop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/advice.html" afterPath="$PROJECT_DIR$/app/views/advice.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/advice.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/advice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/editfarmer.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/editfarmer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/farmer.html" afterPath="$PROJECT_DIR$/app/views/farmer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/farmer.js" afterPath="$PROJECT_DIR$/api/farmer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/farmer.js" afterPath="$PROJECT_DIR$/models/farmer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node-app.js" afterPath="$PROJECT_DIR$/node-app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/others.js" afterPath="$PROJECT_DIR$/api/others.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/routing.js" afterPath="$PROJECT_DIR$/routes/routing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ranadeydata.iws" />
@@ -101,7 +88,7 @@
       <file leaf-file-name="editfarmer.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/editfarmer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="12" selection-start="1150" selection-end="1150" vertical-scroll-proportion="0.64400715">
+            <state line="137" column="32" selection-start="4480" selection-end="4480" vertical-scroll-proportion="0.65460527">
               <folding />
             </state>
           </provider>
@@ -163,10 +150,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1855" />
+    <option name="x" value="1280" />
     <option name="y" value="22" />
-    <option name="width" value="1280" />
-    <option name="height" value="705" />
+    <option name="width" value="1920" />
+    <option name="height" value="1058" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -343,13 +330,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1855" y="22" width="1280" height="705" extended-state="6" />
+    <frame x="1280" y="22" width="1920" height="1058" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24924012" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23229912" sideWeight="0.6717949" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15392725" sideWeight="0.6717949" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -514,7 +501,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/editfarmer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="12" selection-start="1150" selection-end="1150" vertical-scroll-proportion="0.64400715">
+        <state line="137" column="32" selection-start="4480" selection-end="4480" vertical-scroll-proportion="0.65460527">
           <folding />
         </state>
       </provider>

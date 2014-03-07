@@ -111,10 +111,16 @@ angular.module('angularApp')
                     });
                 }
                 callback();
+
+
             });
             
             
         };
+
+
+
+
 
         $scope.init(function(){
             console.log("kuchh");
