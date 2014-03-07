@@ -8,7 +8,7 @@ angular.module('angularApp')
             Description: '',
             Field_Image: '',
             Transaction_Date: '',
-            Product: '',
+            Product: [],
             Crop:'',
             Spray_Date:''
         };
@@ -16,12 +16,22 @@ angular.module('angularApp')
         $scope.products=[];
         $scope.workTypes=[];
         $scope.isEdit = false;
+        $scope.items=[];
+        $scope.selectedValue=[];
+        var i=0;
+
+        $scope.addItem=function()
+        {
+            $scope.items.push("item"+i++);
+            console.log($scope.selectedValue);
+        }
 
         $scope.save = function (){
             $scope.uploadFiles();
             if(!$scope.farmer.TimeLine){
                 $scope.farmer.TimeLine = [];
             }
+            $scope.items.push("item"+i++);
             $scope.farmer.TimeLine.push($scope.advice);
 
 
