@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 var FarmerSchema = new Schema({
     Name: {type: String, required: true},
     Village: String,
-    Phone: String,
+    Phone: Number,
     Location: String,
     Profile_Pic: String,
     TimeLine: [{
@@ -15,7 +15,7 @@ var FarmerSchema = new Schema({
         Description: String,
         Field_Image: String,
         Transaction_Date: String,
-        Product: String,
+        Product: [String],
         Crop: String,
         Spray_Date: String
     }],

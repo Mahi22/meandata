@@ -25,8 +25,8 @@
     </tr>
     <tr>
         <td width="35%">Phone number</td>
-        <td width="65%"><input class="input-large" id="Phone" name="Phone" type="number" placeholder="enter 0 for no number"
-                               ng-model="farmer.Phone"
+        <td width="65%"><input type="number" class="input-large" id="Phone" name="Phone" placeholder="enter 0 for no number"
+                               ng-model="farmer.Phone" ng-minlength=10
                                required><span class="errorMessage" ng-show="farmerForm.Phone.$dirty && farmerForm.Phone.$invalid">
                                invalid entry it should number
                         </span></td>
@@ -57,6 +57,7 @@
                 <li>Crop: {{crop.Crop_Type }}</li>
                 <li>Sowing Date: {{crop.Crop_Sowing_Date}}</li>
                 <li>Land: {{crop.Land}}</li>
+                <li><a href="#/editcrop/{{farmer._id}}/{{crop._id}}">edit<i class="icon-edit"></i></a> <a href="#/delete-project/{{client._id}}/{{project._id}}"><i class="icon-remove"></i></a></li>
                 <br/>
             </ul><button ng-click="save()">Click to add Crop</button></td>
     </tr>
@@ -64,7 +65,7 @@
         <td width="35%">Advice</td>
         <td width="65%">
             <ul ng-repeat="advice in farmer.TimeLine">
-            <li>Assistant name: {{ }}</li>
+            <li>Assistant name: {{assistants[$index]}}</li>
             <li>Work Type: {{advice.Work_Type}}</li>
             <li>Description: {{advice.Description}}</li>
             <li>Field_Image: {{}}</li>
@@ -80,7 +81,7 @@
 
     <div class="row">
         <div class="span12">
-            <button type="submit" class="btn btn-primary" data-ng-click="saveCustomer()" ng-disabled="farmerForm.$invalid || !farmerForm.$dirty">add {{buttonText}}</button>
+            <button type="submit" class="btn btn-primary" data-ng-click="save()" >add {{buttonText}}</button>
             &nbsp;&nbsp;
             <button class="btn btn-danger" data-ng-if="customer.id > 0" data-ng-click="deleteCustomer()">Delete</button>
         </div>
