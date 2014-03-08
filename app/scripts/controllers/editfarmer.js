@@ -52,12 +52,16 @@ angular.module('angularApp')
         };
 
         $scope.save1 = function(){
-            $scope.uploadFile();
-            console.log("Called save fuction");
-            $scope.farmer.$update(function(data){
-                console.log(data);
-                $location.path('/advice/'+data._id);
+
+            $scope.uploadFile(function(){
+                console.log('this is after upload '+ $scope.farmer);
+                $scope.farmer.$update(function(data){
+                    console.log(data);
+                    $location.path('/advice/'+data._id);
+                });
+
             });
+
         };
 
         $scope.getAssistant = function( val, callback){
