@@ -3,7 +3,7 @@
 angular.module('angularApp')
   .controller('AddfarmerCtrl', function ($scope, $location, FarmerData, $http, Fileupload) {
         $scope.farmer = { Name:'',Village:'',Phone:'',Location:'',Profile_Pic:""};
-
+        $scope.isEdit = 1;
         /*$scope.getLocation = function(val) {
             return $http.get('http://maps.googleapis.com/maps/api/geocode/json', {
                 params: {
@@ -19,32 +19,51 @@ angular.module('angularApp')
                 });
         };*/
 
-        $scope.uploadFile = function(){
-          
-          var files = $scope.profpic;
+        $scope.uploadFile = function(callback){
+
+            var files = $scope.profpic;
             if(files != undefined && $scope.farmer.Name != '' && $scope.farmer.Village != '' && validate(files[0])) {
-            var dirName = ($scope.farmer.Name + $scope.farmer.Village).replace(/ /g,'');
-            var uploadUrl = '/upload/'+ dirName + '/';
-            Fileupload.uploadFilesToUrl(files[0], uploadUrl, function(response) {
-              console.log("File uploaded : "+ response.imgpath);
-              $scope.farmer.Profile_Pic = response.imgpath;
-            });
-            return true;
-           }
-           return false;
+                var dirName = ($scope.farmer.Name + $scope.farmer.Village).replace(/ /g,'');
+                var uploadUrl = '/upload/'+ dirName + '/';
+                Fileupload.uploadFilesToUrl(files[0], uploadUrl, function(response) {
+                    console.log("File uploaded : "+ response.imgpath);
+                    $scope.farmer.Profile_Pic = response.imgpath;
+                    callback();
+                });
+
+            }
+            else callback();
         };
 
         $scope.save = function(){
-            
-            if($scope.uploadFile()) {
-              var farmer = new FarmerData($scope.farmer);
-               farmer.$save(function(){
-                   console.log(farmer);
-                   $location.path('/addcrop/'+farmer._id);
-               });
-           }
-           else $scope.errorMessage = "Images not selected.";
+
+
+            $scope.uploadFile(function(){
+                var farmer = new FarmerData($scope.farmer);
+                farmer.$save(function(){
+                    console.log(farmer);
+                    $location.path('/addcrop/'+farmer._id);
+                });
+
+            });
+
         };
+
+        $scope.save2 = function(){
+
+
+            $scope.uploadFile(function(){
+                var farmer = new FarmerData($scope.farmer);
+                farmer.$save(function(){
+                    console.log(farmer);
+                    $location.path('/addcrop/'+farmer._id);
+                });
+
+            });
+
+        };
+
+
 
         function validate(file) {
           var extensions = new Array("jpg","jpeg","gif","png","bmp");

@@ -4,12 +4,19 @@ angular.module('angularApp')
   .controller('EditfarmerCtrl', function ($scope, $routeParams, $location, $http, FarmerData, Fileupload, $q) {
         $scope.farmer = null;
         $scope.assistants = [];
-        $scope.save = function(){
-            $scope.uploadFile();
-            console.log("Called save fuction");
-            $scope.farmer.$update(function(data){
-                console.log(data);
-                $location.path('/addcrop/'+data._id);
+        $scope.isEdit = 0;
+
+
+        $scope.save2 = function(){
+
+
+            $scope.uploadFile(function(){
+                console.log('this is after upload '+ $scope.farmer);
+                $scope.farmer.$update(function(data){
+                    console.log(data);
+                    $location.path('/addcrop/'+data._id);
+                });
+
             });
         };
 
@@ -27,7 +34,7 @@ angular.module('angularApp')
                 });
 
             }
-
+            else callback();
         };
 
         $scope.save = function(){
@@ -36,7 +43,7 @@ angular.module('angularApp')
                 console.log('this is after upload '+ $scope.farmer);
                 $scope.farmer.$update(function(data){
                     console.log(data);
-//                    $location.path('/farmer');
+                    $location.path('/farmer');
                 });
 
             });

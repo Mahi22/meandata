@@ -41,7 +41,7 @@
         <td width="35%">Profile Pic</td>
         <td width="65%"><input type="file" file-model="profpic">
         {{ errorMessage }}
-            <input ng-model="farmer.Profile_Pic">
+            {{farmer.Profile_Pic}}
         </td>
 
 
@@ -60,7 +60,7 @@
                 <li>Land: {{crop.Land}}</li>
                 <li><a href="#/editcrop/{{farmer._id}}/{{crop._id}}">edit<i class="icon-edit"></i></a> <a href="#/delete-project/{{client._id}}/{{project._id}}"><i class="icon-remove"></i></a></li>
                 <br/>
-            </ul><button ng-click="save()">Click to add Crop</button></td>
+            </ul><button ng-click="save2()">Click to add Crop</button></td>
     </tr>
     <tr>
         <td width="35%">Advice</td>
@@ -82,7 +82,7 @@
 
     <div class="row">
         <div class="span12">
-            <button type="submit" class="btn btn-primary" data-ng-click="save()" >add {{buttonText}}</button>
+            <button type="submit" class="btn btn-primary" data-ng-click="save()" ng-hide="isEdit">add {{buttonText}}</button>
             &nbsp;&nbsp;
             <button class="btn btn-danger" data-ng-if="customer.id > 0" data-ng-click="deleteCustomer()">Delete</button>
         </div>
